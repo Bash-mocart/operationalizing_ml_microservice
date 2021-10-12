@@ -5,11 +5,18 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+ dockerpath=bashox/col
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login -u bashox
+
+#docker tag col bashox/udacity[:latest]
+#docker commit col bashox/udacity[:latest]
 
 # Step 3:
-# Push image to a docker repository
+# Push image to a docker repository\
+docker tag col bashox/col
+docker push bashox/col
+ 
