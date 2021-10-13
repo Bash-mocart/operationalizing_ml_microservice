@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/Bash-mocart/operationalizing_ml_microservice/tree/main.svg?style=svg)](https://circleci.com/gh/Bash-mocart/operationalizing_ml_microservice/tree/master)
+[![CircleCI](https://circleci.com/gh/Bash-mocart/operationalizing_ml_microservice/tree/master.svg?style=svg)](https://circleci.com/gh/Bash-mocart/operationalizing_ml_microservice/tree/master)
 
 ## Project Overview
 
