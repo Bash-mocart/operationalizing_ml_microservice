@@ -23,6 +23,14 @@ test:
 	python -m pytest -vv --cov=myrepolib tests/*.py
 	python -m pytest --nbval notebook.ipynb
 
+exec:
+	chmod +x kubernetes_install.sh
+	chmod +x make_predictions.sh
+	chmod +x resize.sh
+	chmod +x run_kubernetes.sh
+	chmod +x run_docker.sh
+	chmod +x upload_docker.sh
+
 lint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
 	# This is linter for Dockerfiles
@@ -31,4 +39,4 @@ lint:
 	# This should be run from inside a virtualenv
 	pylint --disable=R,C,W1203 app.py
 
-all: install lint test
+all: install lint test exec
