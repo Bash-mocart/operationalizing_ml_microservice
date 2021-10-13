@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-docker build --tag=col .
+docker build --tag=coli .
 
 ## Complete the following steps to get Docker running locally
 
