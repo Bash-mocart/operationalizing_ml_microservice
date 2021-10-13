@@ -29,7 +29,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ### Setting up the Makefile
 * The Makefile includes instructions on environment setup and lint tests
 1. Create a Makefile using the `touch` command.
-2. Your Makefile should contains instructions like [I'm an inline-style link](https://github.com/Bash-mocart/operationalizing_ml_microservice/blob/master/Makefile)
+2. Your Makefile should contains instructions [like](https://github.com/Bash-mocart/operationalizing_ml_microservice/blob/master/Makefile)
 
 
 ### Setting up the Environment (AWS Cloud9)
