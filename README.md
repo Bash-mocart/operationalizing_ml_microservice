@@ -1,20 +1,32 @@
-[![CircleCI](https://circleci.com/gh/Bash-mocart/operationalizing_ml_microservice/tree/main.svg?style=svg)](https://circleci.com/gh/Bash-mocart/operationalizing_ml_microservice/tree/main)
+[![CircleCI](https://circleci.com/gh/Bash-mocart/operationalizing_ml_microservice/tree/main.svg?style=svg)](https://circleci.com/gh/Bash-mocart/operationalizing_ml_microservice/tree/master)
 
 ## Project Overview
 
 
-Operationalizing ML Microservice that predicts housing prices in Boston according to several features. Steps are as follows;
-1. Circle Ci for automating lint
-2. Creating Docker Container
-3. Deploying the ML app to the container 
-4. Uploading the container to Docker Hub
-5. Creating a Kubernetes Cluster
-6. Creating a Kubernetes Pod to accomodate the docker container
-7. Pulling the uploaded Docker Container into the Kubernetes Pod
-8. Forwarding the container port to the host port in order to be able to use the app in the cluster
-9. Finally testing the app 
+Operationalizing ML Microservice that predicts housing prices in Boston according to several features. 
 
-Overview of the scripts used;
+Summary:
+
+Setup the Environment
+
+* Create a virtualenv and activate it
+* Run `make install` to install the necessary dependencies
+
+Running `app.py`
+
+1. Standalone:  `python app.py`
+2. Run in Docker:  `./run_docker.sh`
+3. Run in Kubernetes:  `./run_kubernetes.sh`
+
+Kubernetes Steps
+
+* Setup and Configure Docker locally
+* Setup and Configure Kubernetes locally
+* Create Flask app in Container
+* Run via kubectl
+
+
+Overview of the scripts used
 1. .circleci contains the configurations for circle ci
 2. model data contains the data in which the model was trained on
 3. app.py is the ML application that was containerized as a microservice 
@@ -27,9 +39,8 @@ Overview of the scripts used;
 10. run_kubernetes.sh runs kubernetes locally
 11. upload_docker.sh uploads docker to dockerhub
 
-All this was done in a virtual enviroment.
 
-3 ways to test, lint the source code;
+3 ways to test, lint the source code
 1. Using the MakeFile
 2. Using CircleCI
 3. Using the test and lints commands directly within the terminal
@@ -58,20 +69,3 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ---
 
-## Setup the Environment
-
-* Create a virtualenv and activate it
-* Run `make install` to install the necessary dependencies
-
-### Running `app.py`
-
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
-
-### Kubernetes Steps
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
