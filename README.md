@@ -2,6 +2,41 @@
 
 ## Project Overview
 
+
+Operationalizing ML Microservice that predicts housing prices in Boston according to several features. Steps are as follows;
+1. Circle Ci for automating lint
+2. Creating Docker Container
+3. Deploying the ML app to the container 
+4. Uploading the container to Docker Hub
+5. Creating a Kubernetes Cluster
+6. Creating a Kubernetes Pod to accomodate the docker container
+7. Pulling the uploaded Docker Container into the Kubernetes Pod
+8. Forwarding the container port to the host port in order to be able to use the app in the cluster
+9. Finally testing the app 
+
+Overview of the scripts used;
+1. .circleci contains the configurations for circle ci
+2. model data contains the data in which the model was trained on
+3. app.py is the ML application that was containerized as a microservice 
+4. DockerFile configures the docker container
+5. kubernetes_install.sh installs kubernetes, minikube and conntrack
+6. Makefile.sh contains list of commands for linting and tests
+7. requirements.txt contains lists of dependencies required by the ML app
+8. resize.sh resizes EBS to have docker container built locally on Amazon EC2
+9. run_docker.sh runs the locally build docker container
+10. run_kubernetes.sh runs kubernetes locally
+11. upload_docker.sh uploads docker to dockerhub
+
+All this was done in a virtual enviroment.
+
+3 ways to test, lint the source code;
+1. Using the MakeFile
+2. Using CircleCI
+3. Using the test and lints commands directly within the terminal
+
+
+
+
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
 
 You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
