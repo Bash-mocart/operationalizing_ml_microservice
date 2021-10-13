@@ -1,1 +1,9 @@
-<paste log output from Kubernetes-mediated prediction, here>
+NAME        READY   STATUS    RESTARTS   AGE
+container   1/1     Running   0          72s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+E1013 01:38:37.080900    3620 portforward.go:400] an error occurred forwarding 8000 -> 80: error forwarding port 80 to pod fdee902c5a095f84b7fe8790b7ee17713e720c427339f6c26409b28626968b00, uid : unable to do port forwarding: socat not found
+Handling connection for 8000
+E1013 01:38:50.037140    3620 portforward.go:400] an error occurred forwarding 8000 -> 80: error forwarding port 80 to pod fdee902c5a095f84b7fe8790b7ee17713e720c427339f6c26409b28626968b00, uid : unable to do port forwarding: socat not found
+Handling connection for 8000
